@@ -2,7 +2,7 @@ const fs = require("fs")
 
 
 
-fs.readFile("./input.txt", { encoding: 'utf8' }, function callback(err, data) {
+fs.readFile("../../input.txt", { encoding: 'utf8' }, function callback(err, data) {
 
     const arr = data.trim().split("\n")
 
