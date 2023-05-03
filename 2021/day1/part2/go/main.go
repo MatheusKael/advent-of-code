@@ -79,15 +79,15 @@ func sol() {
 
 	for start != length {
 
+		// FIX -> It's giving the wrong number of count
+		if len(vals) > 2 && sum > vals[len(vals)-2] {
+			count++
+		}
 		if start == end {
 			start = end
 			end = start + 3
 
 			vals = append(vals, sum)
-			// FIX -> Sum needs to be bigger than the previous sum value in vals
-			if sum > vals[len(vals)-2] && len(vals) > 2 {
-				fmt.Println(vals[len(vals)-1])
-			}
 			sum = 0
 		}
 
